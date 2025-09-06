@@ -1,9 +1,7 @@
-import { API_CATEGORY } from "./contants.js";
-import { drawProduct } from "./drawProduct.js";
 import { fetchApi } from "./fetchApi.js";
-import { params } from "./variable.js";
-
-const category = document.querySelector("#category");
+import { API_CATEGORY } from "./contants.js";
+import { category, params } from "./variable.js";
+import { drawProduct } from "./drawProduct.js";
 
 fetchApi(API_CATEGORY)
   .then(data => {
@@ -13,9 +11,11 @@ fetchApi(API_CATEGORY)
            ${item.name}
          </div>
       `;
-    })
+    }).join("");
 
-    category.innerHTML = htmls.join("");
+    if (category) {
+      category.innerHTML = htmls;
+    }
 
     const listCategory = document.querySelectorAll("#category .category__item");
 
@@ -25,4 +25,4 @@ fetchApi(API_CATEGORY)
         drawProduct();
       });
     });
-  })
+  });

@@ -1,6 +1,6 @@
 import { fetchApi } from "./fetchApi.js";
 import { API_PRODUCT } from "./contants.js";
-import { params } from "./variable.js";
+import { params, products } from "./variable.js";
 
 export const drawProduct = () => {
   let category = "";
