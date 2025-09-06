@@ -1,0 +1,15 @@
+.category__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category__list .category__item {
+  width: 15%;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 20px;
+  background: orange;
+  border-radius: 5px;
+  cursor: pointer;
+}
