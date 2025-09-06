@@ -3,7 +3,7 @@ import { API_PRODUCT } from "./contants.js";
 import { params } from "./variable.js";
 
 export const drawProduct = () => {
-  const api = `${API_PRODUCT}?q=${params.q}&_sort=${params.sort}&_order=${params.order}`;
+  const api = `${API_PRODUCT}?q=${params.q}&_sort=${params.sort}&_order=${params.order}&_page=${params.page}&_limit=${params.limit}`;
 
   fetchApi(api)
     .then(data => {

@@ -49,3 +49,24 @@ filter.addEventListener("change", function (e) {
   drawProduct();
 });
 // End filter
+
+// Pagination
+const pagiPrev = document.querySelector("#paginationPrev");
+const pagiNext = document.querySelector("#paginationNext");
+const pagiNumber = document.querySelector("#paginationNumber");
+
+pagiNext.addEventListener("click", function () {
+  params.page += 1;
+  pagiNumber.innerHTML = params.page;
+  drawProduct();
+});
+
+pagiPrev.addEventListener("click", function () {
+  if (params.page > 1) {
+    params.page -= 1;
+    pagiNumber.innerHTML = params.page;
+    drawProduct();
+  }
+});
+
+// End pagination
