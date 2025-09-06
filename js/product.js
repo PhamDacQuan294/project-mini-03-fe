@@ -22,3 +22,30 @@ inputSearch.addEventListener("keydown", function (e) {
   }
 });
 // End search
+
+// Filter
+const filter = document.querySelector("#filter");
+filter.addEventListener("change", function (e) {
+  switch (e.target.value) {
+    case "mac-dinh":
+      params.sort = "";
+      params.order = "";
+      break;
+    case "gia-thap-den-cao":
+      params.sort = "price";
+      params.order = "asc";
+      break;
+    case "gia-cao-den-thap":
+      params.sort = "price";
+      params.order = "desc";
+      break;
+    case "giam-gia-nhieu":
+      params.sort = "discountPercentage";
+      params.order = "desc";
+      break;
+    default:
+      break;
+  }
+  drawProduct();
+});
+// End filter
