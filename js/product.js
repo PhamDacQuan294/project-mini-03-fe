@@ -1,8 +1,9 @@
+import { API_PRODUCT } from "./contants.js";
 import { fetchApi } from "./fetchApi.js";
 
 const products = document.querySelector("#products");
 
-fetchApi("http://localhost:3000/products")
+fetchApi(API_PRODUCT)
   .then(data => {
     let htmls = data.map(item => {
       return `
