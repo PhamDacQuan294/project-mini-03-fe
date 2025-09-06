@@ -1,8 +1,9 @@
 import { fetchApi } from "./fetchApi.js";
 import { API_PRODUCT } from "./contants.js";
+import { params } from "./variable.js";
 
 export const drawProduct = () => {
-  const api = `${API_PRODUCT}`;
+  const api = `${API_PRODUCT}?q=${params.q}`;
 
   fetchApi(api)
     .then(data => {
