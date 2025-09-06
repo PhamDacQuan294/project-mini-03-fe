@@ -4,4 +4,5 @@ export let params = {
   order: "",
   page: 1,
   limit: 2,
+  category: ""
 };
