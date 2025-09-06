@@ -4,17 +4,17 @@ const fetchApi = async (api) => {
   return result;
 }
 
-const category = document.querySelector("#category");
+const products = document.querySelector("#products");
 
-fetchApi("http://localhost:3000/category")
+fetchApi("http://localhost:3000/products")
   .then(data => {
     let htmls = data.map(item => {
       return `
-        <div class="category__item">
-           ${item.name}
+        <div class="product__item">
+           ${item.title}
         </div>
       `;
     })
 
-    category.innerHTML = htmls.join("");
+    products.innerHTML = htmls.join("");
   })
